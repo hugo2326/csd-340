@@ -1,3 +1,3 @@
 # csd-340
-# H1
+# CSD 340 Web Development with HTML and CSS
 Repository csd-340 Hugo Vega Hernandez
