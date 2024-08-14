@@ -1,0 +1,60 @@
+body {
+	
+    font-family: 16px Arial, sans-serif;
+	font-weight: 400;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 { 
+	text-transform: uppercase; 
+	text-align: center;
+    font-weight: 700;
+    color: #333;
+}
+
+h2 {
+	text-align: left;
+	padding: 15px;
+	font-weight: 500;
+    color: #333;
+}
+
+.intro {
+	text-indent: 2em;
+    font-weight: bold;
+}
+
+.sentence {
+	font-style: italic;
+}
+
+address {
+	text-align: center;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+a {
+	font-weight: bold;
+	font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+	color: #D6A800;
+}
+
+a:visited {
+  color: forestgreen;
+  text-decoration-color: hotpink;
+}
