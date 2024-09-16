@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSD 340 Assignment 2.2">
+    <meta name="author" content="Hugo Vega Hernandez">
+    <meta name="keywords" content="HTML, CSS, Assignment">
+    <title>CSD 340 Development with HTML and CSS</title>
+    <link rel="stylesheet" href="vegahernandez_mod2_2.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+        <h2>Student Hugo Vega Hernandez</h2>
+        <p class="intro">My name is Hugo Vega. I am from El <span id="word1">_______</span>, a small country in Central America. I came to this country after a temporary employment offer as an Applications Analyst at Curacao 
+		company in <span id="word2">_______</span>. After one year of working for this company and almost at the end of my one-year contract, I met the love of my life, Vanessa, now my wife. I decided to stay in the United States 
+		and start my family in this great country.</p>
+        <p>I currently reside in Covina, California, where I had the opportunity to get my first house. I have two kids: my son Derek, who is twelve years old; Valentina, who is seven; and my dog 
+		Bruno.<span class="sentence">They keep me busy all the time.</span> When I am not doing coursework, what keeps me busy is my full-time job. I am an Applications Analyst and have been doing this since 2001. I love playing sports with my son, primarily 
+		basketball and soccer, and building Legos.</p>
+        <p>I am in the process of getting my Bachelor’s Degree in Software <span id="word3">_______</span>. As I mentioned above, I have been doing IT work for some time now, so my plan after graduation is to get a management position to guide my 
+		team with everything I’ve been learning. I am very excited about this class as we will learn Python software, and I know there are many opportunities to work in this field. I feel so lucky to have this opportunity.</p>
+        <p>Finally, I would like to share that one of my favorite hobbies is watching movies. One of my favorite movies taught me never to give up and to follow my dreams without worrying about how many times I can fail. 
+		If you continue trying, you will accomplish what you envision. The movie is “The Pursuit of <span id="word4">_______</span>.” I watch this movie every time I need to motivate myself to continue for my goals.</p>
+		
+		<button onclick="replaceWord('word1', 'Salvador')">Salvador</button>
+		<button onclick="replaceWord('word2', '2001')">2001</button>
+		<button onclick="replaceWord('word3', 'Development')">Development</button>
+		<button onclick="replaceWord('word4', 'Happyness')">Happyness</button>
+		
+  <script>
+    function replaceWord(spanId, word) {
+        document.getElementById(spanId).innerHTML = word;
+    }
+  </script>
+  
+		<hr>
+        <address>
+            <p><a href="https://www.bellevue.edu">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+    </div>
+</body>
+</html>
