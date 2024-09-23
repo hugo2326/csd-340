@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .image-container img {
+            width: 300px;
+            height: 200px;
+            border-radius: 5px;
+        }
+
+        .description {
+            text-align: center;
+        }
+
+        .description:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <div class="image-container">
+        <img id="firstImage" src="one.png" alt="first Image">
+        <div class="description">
+            Click the image to see a different view!
+        </div>
+    </div>
+
+    <script>
+        const firstImage = document.getElementById('firstImage');
+        let isfirstImageTwo = false; // Track the current image
+
+        firstImage.addEventListener('click', () => {
+            if (isfirstImageTwo) {
+                firstImage.src = 'one.png'; // Switch back to the first image
+                isfirstImageTwo = false;
+            } else {
+                firstImage.src = 'two.png'; // Switch to the second image
+                isfirstImageTwo = true;
+            }
+        });
+    </script>
+
+    <div class="image-container">
+        <img id="secondImage" src="three.png" alt="second Image">
+        <div class="description">
+            Click the image to see a different view!
+        </div>
+    </div>
+
+    <script>
+        const secondImage = document.getElementById('secondImage');
+        let issecondImageFour = false; // Track the current image
+
+        secondImage.addEventListener('click', () => {
+            if (issecondImageFour) {
+                secondImage.src = 'three.png'; // Switch back to the first image
+                issecondImageFour = false;
+            } else {
+                secondImage.src = 'four.png'; // Switch to the second image
+                issecondImageFour = true;
+            }
+        });
+    </script>
+
+</body>
+</html>
