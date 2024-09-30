@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+</head>
+<body>
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+	<p>This is an interactive To Do List. Type in your first item in the text book, then click Add. Click the Display button to see current items in the list. Click on Delete Last Entry if you ‘d like to remove the last entry.</p>
+
+    <input type="text" id="textInput" placeholder="Enter text">
+    <button id="addButton">Add</button>
+    <button id="deleteButton">Delete Last Entry</button>
+    <button id="displayButton">Display</button>
+	<hr width="100%" color="green" />
+
+    <p id="displayArea"></p> 
+	
+    <script>
+        // Array to store the input values
+        let items = [];
+
+        // Function to add an item to the array
+        function addItem() {
+            let inputValue = document.getElementById("textInput").value;
+            items.push(inputValue);
+            alert("Added '" + inputValue + "' to the array.");
+            document.getElementById("textInput").value = ""; // Clear input field
+        }
+
+        // Function to delete the last item from the array
+        function deleteLastItem() {
+            if (items.length > 0) {
+                items.pop(); // Remove the last element
+                alert("Last item deleted.");
+            } else {
+                alert("The array is empty.");
+            }
+        }
+
+        // Function to display the array contents
+        function displayArray() {
+            let displayText = "<strong>Items in the Array / List:</strong><br>"; // Added line
+            for (let i = 0; i < items.length; i++) {
+                displayText += "Item " + (i + 1) + ". " + items[i] + "<br>"; 
+            }
+            document.getElementById("displayArea").innerHTML = displayText;
+        }
+
+        // Attach event listeners to the buttons
+        document.getElementById("addButton").addEventListener("click", addItem);
+        document.getElementById("deleteButton").addEventListener("click", deleteLastItem);
+        document.getElementById("displayButton").addEventListener("click", displayArray);
+    </script>
+	<hr width="100%" color="green" />
+</body>
+
+</html>
